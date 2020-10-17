@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Happy Bday Vandu</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text-container">
+      <div class="text"></div>
+      <audio class="audio" src="bdaysong.mp3" controls autoplay loop></audio>
+    </div>
+  <div class="text-container1">
+    <iframe src="https://drive.google.com/file/d/1S7i8F-oFd6_RK_GRXVpsVLcjE5xdimz0/preview"></iframe>
+  </div>
+  <div class="text-container1">
+    <div class="img">
+      <img src="photos/collage.png" class="img-fluid" alt="">
+    </div><br>
+    <a href="photos/collage.png" download>Download</a>
+  </div>
+  <div class="text-container1">
+    <div class="img">
+    <img src="photos/v7.jpg" class="img-fluid" alt="">
+    </div>
+    <h3 class="say">Happy birthday vandana <br>
+      enjoy your day and keep smileing and laughing
+    </h3>
+  </div>
+  <div class="text-container1">
+    <div class="img">
+    <img src="photos/d1.jpeg" class="img-fluid" alt="">
+    </div>
+    <h3 class="say">Happy birthday vandu <br>
+      kuch bolne ki jarurat hai 
+    </h3>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script src="scramble.js"></script>
+    <script>
+      const phrases = ["Baar baar din ye aaye","baar baar ye dil❤️ ye gaye","baar baar din ye aaye","baar baar ye dil❤️ ye gaye","tu jiye haajaro Saal","ye meri hai aarzo","Happy birthday to you","happy birthday to you","happy birthday to you....","vandana🦹🏼‍👧🏼","happy birthday to you"];
+      const el = document.querySelector('.text');
+      const fx = new TextScramble(el);
+      let counter = 0;
+      
+      const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          setTimeout(next, 1200);
+        });
+        counter = (counter + 1) % phrases.length;
+      };
+      
+      next();
+    </script>
+</body>
+</html>
